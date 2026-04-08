@@ -37,7 +37,7 @@ footer {
   padding: 0.2rem 0.8rem; border-radius: 20px; 
   font-size: 0.75rem; font-weight: 600; 
   display: inline-block; margin-top: 0.5rem;
-
+}
 /* CSS */ 
 .grid { 
   display: grid; 
@@ -283,6 +283,7 @@ function deleteNoteById(id) {
     notes.splice(index, 1); 
     renderNotes(); 
   }
+}
 
 function clearAllNotes() { 
   if (notes.length === 0) { 
