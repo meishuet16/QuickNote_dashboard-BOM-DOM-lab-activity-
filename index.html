@@ -332,7 +332,8 @@ function init() {
   addSampleNotes();    // populate demo notes 
   updateWindowSize();  // BOM: show current size 
   showUserAgent();     // BOM: show user agent 
-  //
+
+  //Attach button click listeners
   addBtn.addEventListener("click", addNote); 
   clearAllBtn.addEventListener("click", clearAllNotes); 
 
@@ -350,6 +351,11 @@ function init() {
 init();   // ← call init when the page loads
 
   </script> 
+
+  <footer> 
+  💡💡 BOM: confirm() on delete · alert() on empty title 
+     · resize event updates window size. 
+</footer>
  
 </body> 
 </html>
