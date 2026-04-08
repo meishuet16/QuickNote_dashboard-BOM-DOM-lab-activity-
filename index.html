@@ -332,8 +332,19 @@ function init() {
   addSampleNotes();    // populate demo notes 
   updateWindowSize();  // BOM: show current size 
   showUserAgent();     // BOM: show user agent 
+  //
   addBtn.addEventListener("click", addNote); 
   clearAllBtn.addEventListener("click", clearAllNotes); 
+
+  //Use event delegation for delete buttons 
+  notesContainer.addEventListener("click", (e) => { 
+  // find the closest ancestor (or self) that is a delete button 
+  const btn = e.target.closest('[data-action="delete"]'); 
+  if (btn) { 
+    const id = parseInt(btn.getAttribute("data-id"), 10); 
+    deleteNoteById(id); 
+  } 
+}); 
 } 
  
 init();   // ← call init when the page loads
